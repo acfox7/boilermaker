@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //main get to server index.html file
 app.get('/', (req, res) =>
-  res.sendFile(path.joint(__dirname, '..', 'public/index.html'))
+  res.sendFile(path.join(__dirname, '..', 'public/index.html'))
 );
 
 //router folder/directory
@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 //for any other page send index.html
 app.use('*', (req, res) => {
-  res.sendFile(path.joint(__dirname, '..', 'public/index.html'));
+  res.sendFile(path.join(__dirname, '..', 'public/index.html'));
 });
 
 //error handler
